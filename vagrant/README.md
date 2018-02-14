@@ -123,4 +123,5 @@ Setelah berhasil menginstall vagrant, selanjutnya kita akan mencoba membuat virt
 		config.vm.box = "base"
 	menjadi
 
-		config.vm.box = "hashicorp/precise64" 
+		config.vm.box = "hashicorp/precise64"
+7. Simpan file Vagrantfile
