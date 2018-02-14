@@ -286,7 +286,7 @@ Kita menginginkan komputer virtual yang kita gunakan telah terinstall aplikasi a
 			SHELL
 
 
-Proses provisioning dapat juga menggunakan configuration management seperti ansible, chef, atau puppet. Proses provisioning otomatis menjalankan menggunakan superuser. Jika ingin mematikan previlige supseruser dapat menambahkan opsi
+Proses provisioning dapat juga menggunakan configuration management seperti ansible, chef, atau puppet. Proses provisioning otomatis menjalankan menggunakan superuser. Jika ingin mematikan superuser dapat menambahkan opsi
 
 	privileged:false
 
