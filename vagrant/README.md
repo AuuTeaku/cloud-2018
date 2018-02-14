@@ -220,7 +220,7 @@ Adakalanya kita ingin mendevelop aplikasi menggunakan editor favorit kita sepert
 		# config.vm.synced_folder "../data", "/vagrant_data"
 	menjadi
 
-		# config.vm.synced_folder "src/", "/var/www"
+		config.vm.synced_folder "src/", "/var/www"
 2. Simpan file Vagrantfile. **src/** adalah folder pada komputer host, sedangkan **/var/www** adalah folder pada komputer virtualisasi.
 
 3. Buat folder src di dalam folder projek vagrant example kemudian tambahkan file index.html
@@ -268,7 +268,7 @@ Kita menginginkan komputer virtual yang kita gunakan telah terinstall aplikasi a
 			vagrant reload --provision
 	atau
 
-			vagrant provision
+		vagrant provision
 
 	6. Cek apakah provisioning berhasil dengan masuk kedalam virtualisasi menggunakan ssh.
 
