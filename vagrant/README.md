@@ -249,14 +249,12 @@ Kita menginginkan komputer virtual yang kita gunakan telah terinstall aplikasi a
 			#!/usr/bin/env bash
 			apt-get update
 			apt-get install -y apache2
-	3. Pada file Vagrantfile dibawah baris config.vm.box = "hashicorp/precise64" tambahkan baris  
+	3. Pada file Vagrantfile diatas **end** terakhir, tambahkan baris  
 
 			config.vm.provision :shell, path: "bootstrap.sh".
 
 		Sehingga menjadi
-
-			Vagrant.configure("2") do |config|
-				config.vm.box = "hashicorp/precise64"
+		
 				config.vm.provision "shell", path: "bootstrap.sh"
 			end
 
