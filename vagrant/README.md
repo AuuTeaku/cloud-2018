@@ -121,6 +121,6 @@ Setelah berhasil menginstall vagrant, selanjutnya kita akan mencoba membuat virt
 6. Setting box pada Vagrant file dengan cara ganti vm.box yang awalnya **base** menjadi **hashicorp/precise64**
 
 		config.vm.box = "base"
-menjadi
+	menjadi
 
 		config.vm.box = "hashicorp/precise64" 
