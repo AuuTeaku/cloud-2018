@@ -234,8 +234,73 @@ Adakalanya kita ingin mendevelop aplikasi menggunakan editor favorit kita sepert
 5. Masuk ke dalam virtualisasi.
 
 		vagrant ssh
-		
+
 6. Lakukan perubahan pada file src/index.html di komputer host, kemudian cek file index.html yang berada pada folder /var/www di komputer virtual. Kedua file akan berisi data yang sama, karena telah tersinkronisasi.
+
+### H.Provisioning aplikasi pada komputer virtual
+Kita menginginkan komputer virtual yang kita gunakan telah terinstall aplikasi aplikasi yang kita butuhkan. Tahapan instalasi dan konfigurasi tersebut sering dikenal dengan sebutan provisioning. Pada vagrant, provisioning dapat dilakukan dengan mudah. Kita dapat membuat script menggunakan bash scripting untuk melakukan provisioning. Langkah-langkah untuk melakukan provisioning adalah sebagai berikut:
+
+* Menggunakan File bootstrap
+
+	1. Buat bash script dengan nama bootsrap.sh pada folder yang sama dengan vagrant file.
+	2. Untuk menginstall apache tuliskan baris berikut pada file bootsrap.sh.
+
+			#!/usr/bin/env bash
+			apt-get update
+			apt-get install -y apache2
+	3. Pada file Vagrantfile dibawah baris config.vm.box = "hashicorp/precise64" tambahkan baris  
+
+			config.vm.provision :shell, path: "bootstrap.sh".
+
+		Sehingga menjadi
+
+			Vagrant.configure("2") do |config|
+				config.vm.box = "hashicorp/precise64"
+				config.vm.provision "shell", path: "bootstrap.sh"
+			end
+
+	4. Simpan file Vagrantfile kemudian nyalakan virtualisasi.
+
+			vagrant up
+
+	5. Jika virtualisasi sudah dibuat dan sedang menyala maka jalankan fungsi reload dengan menambahkan flag **--provision** untuk memaksa vagrant merestart virtualisasi dan menjalankan script provisioning ketika mesin virtual sedang aktif.
+
+			vagrant reload --provision
+	atau
+
+			vagrant provision
+
+	6. Cek apakah provisioning berhasil dengan masuk kedalam virtualisasi menggunakan ssh.
+
+			vagrant ssh
+	7. Cek apakah apache telah berhasil terinstall
+
+			service apache2 status
+* atau dengan Menambahkan command pada **Vagrantfile**
+	1. Uncomment baris:
+
+			config.vm.provision "shell", inline: <<-SHELL
+			  	apt-get update
+			  	apt-get install -y apache2
+			SHELL
+
+
+Proses provisioning dapat juga menggunakan configuration management seperti ansible, chef, atau puppet. Proses provisioning otomatis menjalankan menggunakan superuser. Jika ingin mematikan previlige supseruser dapat menambahkan opsi
+
+	privileged:false
+
+Contoh:
+
+	config.vm.provision "shell", path: "bootstrap.sh",  privileged:false
+
+
+
+### I. Referensi
+1. Modul Komputasi Awan 2017 oleh Thiar Hasbiya S.Kom, M.Kom
+2. Pengalaman
+
+
+
 
 
 
