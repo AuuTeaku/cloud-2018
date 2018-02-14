@@ -160,8 +160,8 @@ Layaknya komputer fisik, virtual machine terdapat memory dan core cpu. Pada **Va
 2. Untuk masuk ke virtual machine : `vagrant ssh`
 3. Untuk mematikan virtual machine : `vagrant halt`
 4. Untuk menghapus virtual machine : `vagrant destroy`
-5. Untuk merestart virtual machine dan akan memuat ulang konfigurasi **Vagrantfile** : `vagrant destroy`
-6. 
+5. Untuk merestart virtual machine dan akan memuat ulang konfigurasi **Vagrantfile** : `vagrant reload`
+6. Untuk menjalankan provisioning : `vagrant provsion`
 
 ### F. Konfigurasi Internet Pada Virtual Machine
 Pada vagrant terdapat 3 jenis konfigurasi agar virtual machine dapat diakses dari host maupun dari luar host.
