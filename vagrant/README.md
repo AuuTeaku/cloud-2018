@@ -212,7 +212,25 @@ Pada vagrant terdapat 3 jenis konfigurasi agar virtual machine dapat diakses dar
 
 		Ip tergantung subnet dari host
 
+### G. Sinkronisasi folder
+Adakalanya kita ingin mendevelop aplikasi menggunakan editor favorit kita seperti sublimetext, netbeans dan lain sebagainya, tetapi kita ingin agar kode-kode aplikasi kita tersebut berada di dalam virtualisasi sehingga ketika terjadi perubahan kode maka kode tersebut langsung dipindahkan ke dalam virtualisasi atau kita ingin folder di dalam virtualisasi dapat diakses melalui komputer host untuk keperluan backup/audit. Hal seperti ini dapat dilakukan menggunakan fitur sinkronisasi pada vagrant. Folder yang di sinkronisasi dapat diakses melalui komputer host atau virtual dengan kondisi tersinkronisasi, sehingga ketika terjadi perubahan melalui komputer host atau melalui virtualisasi data-data dalam folder tersebut tetap sama. Untuk mengaktifkan sinkronisasi folder lakukan langkah-langkah berikut:
 
+	1. Buka file Vagrantfile ubah baris berikut.
+			# config.vm.synced_folder "../data", "/vagrant_data"
+	menjadi
+			# config.vm.synced_folder "src/", "/var/www"
+	2. Simpan file Vagrantfile. **src/** adalah folder pada komputer host, sedangkan **/var/www** adalah folder pada komputer virtualisasi.
+
+	3. Buat folder src di dalam folder projek vagrant example kemudian tambahkan file index.html
+
+		mkdir src
+		echo "hello world" >> src/index.html
+	4. Jalankan virtualisasi.
+		vagrant up
+	5. Masuk ke dalam virtualisasi.
+
+		vagrant ssh
+	6. Lakukan perubahan pada file src/index.html di komputer host, kemudian cek file index.html yang berada pada folder /var/www di komputer virtual. Kedua file akan berisi data yang sama, karena telah tersinkronisasi.
 
 
 
