@@ -1,5 +1,4 @@
-
-#Teknis FP Komputasi Awan 2018
+# Teknis FP Komputasi Awan 2018
 1. FP dimulai minggu ke 8 perkuliahan
 2. Topik final project dibebaskan dengan persyaratan membuat proposal final project terlebih dahulu.
 
