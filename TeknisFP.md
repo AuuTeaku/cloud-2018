@@ -14,7 +14,7 @@
 	3. Rapid Elasticity
 		- Dalam FP kelompok dapat melakukan penambahan node atau pengurangan node untuk mendukung service
 	4. Broad Network Access
-		- Service dapat diakses melalui 2 interface yang berbeda. Contoh : web dan cli atau web atau mobile application
+		- Service dapat diakses melalui 2 interface yang berbeda. Contoh : web dan cli atau web dan mobile application
 	5. Measured Service
 		- Service dapat dimonitoring
 
