@@ -2,6 +2,13 @@
 
 ![](https://blog.theodo.fr/wp-content/uploads/2017/07/Vagrant.png)
 
+
+### Persyaratan Mengikuti Praktikum
+		1. Sudah menginstall Ubuntu 16.04/Unix yang lainnnya.
+		2. Sudah menginstall Vagrant
+		3. Sudah menginstall Virtual Box
+		4. Pastikan komputer dapat connect ke Internet
+
 ## A. Dasar Teori
 ### 1. Virtualiasi
 Virtualisasi adalah teknologi untuk membuat sistem operasi dapat berjalan pada lingkungan virtual. Virtualisasi memungkinkan berjalannya beberapa sistem operasi pada satu komputer fisik yang sama pada waktu yang bersamaan. Sistem operasi yang berjalan pada virtualisasi terisolasi dari lingkungan sistem operasi komputer fisiknya, sehingga jika terjadi gangguan pada sistem operasi virtual tidak akan menggangu komputer fisik/host nya. Beberapa contoh teknologi virtualisasi antara lain virtualbox, vmware, vagrant , dan docker.
