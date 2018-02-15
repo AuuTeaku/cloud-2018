@@ -4,7 +4,7 @@
 
 
 ### Persyaratan Mengikuti Praktikum
-		1. Sudah menginstall Ubuntu 16.04/Unix yang lainnnya.
+		1. Sudah menginstall Ubuntu 16.04/Unix yang lainnya.
 		2. Sudah menginstall Vagrant
 		3. Sudah menginstall Virtual Box
 		4. Pastikan komputer dapat connect ke Internet
