@@ -1,4 +1,6 @@
 # Teknis FP Komputasi Awan 2018
+Lastest update : **Kamis, 15 Februari 2018 10.20**
+
 1. FP dimulai minggu ke 8 perkuliahan
 2. Topik final project dibebaskan dengan persyaratan membuat proposal final project terlebih dahulu.
 
@@ -22,4 +24,3 @@
 8. Peraturan final project  dapat berubah sewaktu-waktu dan akan diumumkan apabila terdapat perubahan.
 
 
-Lastest update : Kamis, 15 Februari 2018 10.20
