@@ -222,7 +222,7 @@ Adakalanya kita ingin mendevelop aplikasi menggunakan editor favorit kita sepert
 	menjadi
 
 		config.vm.synced_folder "src/", "/var/www"
-2. Simpan file Vagrantfile. **src/** adalah folder pada komputer host, sedangkan **/var/www** adalah folder pada komputer virtualisasi.
+2. Simpan file Vagrantfile. **src/** adalah folder pada komputer host, sedangkan **/var/www** adalah folder pada virtual machine.
 
 3. Buat folder src di dalam folder projek vagrant example kemudian tambahkan file index.html
 
@@ -236,9 +236,9 @@ Adakalanya kita ingin mendevelop aplikasi menggunakan editor favorit kita sepert
 
 		vagrant ssh
 
-6. Lakukan perubahan pada file src/index.html di komputer host, kemudian cek file index.html yang berada pada folder /var/www di komputer virtual. Kedua file akan berisi data yang sama, karena telah tersinkronisasi.
+6. Lakukan perubahan pada file src/index.html di komputer host, kemudian cek file index.html yang berada pada folder /var/www di virtual machine. Kedua file akan berisi data yang sama, karena telah tersinkronisasi.
 
-### H.Provisioning aplikasi pada komputer virtual
+### H.Provisioning aplikasi pada virtual machine
 Kita menginginkan komputer virtual yang kita gunakan telah terinstall aplikasi aplikasi yang kita butuhkan. Tahapan instalasi dan konfigurasi tersebut sering dikenal dengan sebutan provisioning. Pada vagrant, provisioning dapat dilakukan dengan mudah. Kita dapat membuat script menggunakan bash scripting untuk melakukan provisioning. Langkah-langkah untuk melakukan provisioning adalah sebagai berikut:
 
 * Menggunakan File bootstrap
@@ -265,9 +265,10 @@ Kita menginginkan komputer virtual yang kita gunakan telah terinstall aplikasi a
 	5. Jika virtualisasi sudah dibuat dan sedang menyala maka jalankan fungsi reload dengan menambahkan flag **--provision** untuk memaksa vagrant merestart virtualisasi dan menjalankan script provisioning ketika mesin virtual sedang aktif.
 
 			vagrant reload --provision
-	atau
 
-		vagrant provision
+		atau tanpa merestart ulang virtual machine
+
+			vagrant provision
 
 	6. Cek apakah provisioning berhasil dengan masuk kedalam virtualisasi menggunakan ssh.
 
