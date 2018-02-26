@@ -307,7 +307,5 @@ Contoh:
 2. Pengalaman
 
 
-
-
-
-
+J. Soal Latihan
+1. Buat vagrant virtualbox dan install nginx. Nginx dapat diakses pada port 9000 host.
