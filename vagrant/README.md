@@ -31,7 +31,7 @@ Mac Os : via Official Web dan jalankan file .dmg. [Download](https://www.virtual
 ### 2. Instalasi Vagrant
 Debian Based : `apt-get install vagrant`
 
-Mac Os : `brew install vagrant`
+Mac Os : via official web
 
 
 ### C. Membuat Virtualisasi
@@ -121,7 +121,7 @@ Setelah berhasil menginstall vagrant, selanjutnya kita akan mencoba membuat virt
 		  # SHELL
 		end
 
-4. Pada contoh kasus ini kita ingin menggunakan os Ubuntu (14.04) Precise 64 bit. Maka dari itu kita perlu download **Vagrant Box** terlebih dahulu. Dengan cara:
+4. Pada contoh kasus ini kita ingin menggunakan os Ubuntu (12.04) Precise 64 bit. Maka dari itu kita perlu download **Vagrant Box** terlebih dahulu. Dengan cara:
 
 	`vagrant box add hashicorp/precise64`
 
@@ -323,7 +323,5 @@ Contoh:
 	1. Squid proxy
 	2. Bind9
 
-
-
-
-
+### J. Soal Latihan
+1. Buat vagrant virtualbox dan install nginx. Nginx dapat diakses pada port 9000 host.
