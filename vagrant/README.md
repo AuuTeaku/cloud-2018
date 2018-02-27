@@ -31,7 +31,7 @@ Mac Os : via Official Web dan jalankan file .dmg. [Download](https://www.virtual
 ### 2. Instalasi Vagrant
 Debian Based : `apt-get install vagrant`
 
-Mac Os : `brew install vagrant`
+Mac Os : via official web
 
 
 ### C. Membuat Virtualisasi
