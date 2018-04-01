@@ -4,7 +4,7 @@
 
 
 ### Persyaratan Mengikuti Praktikum
-		1. Sudah menginstall Ubuntu 16.04/Unix yang lainnya.
+		1. Sudah menginstall Ubuntu 16.04.
 		2. Sudah menginstall Docker CE
 		3. Sudah menginstall Docker Compose
 		4. Pastikan komputer dapat connect ke Internet
@@ -83,6 +83,7 @@ Terdapat hasil pencarian dengan Name httpd dan official ok, berarti kontainer/im
     - Untuk menyalankan kembali container docker : `docker start apache-cloud`
     - Untuk me-restart container docker : `docker restart apache-cloud`
     - Untuk menghapus container docker : `docker rm apache-cloud`
+    - Untuk melihat log container docker : `docker logs apache-cloud`
 
     5.1 Contoh menghentikan container docker:
 
@@ -127,4 +128,51 @@ Docker tidak menyimpan state atau data apapun di dalam kontainer. Sehingga jika 
 
     ![](Assets/10.png)
 
-    
+### D. Dockerfile
+Dockerfile adalah file yang digunakan untuk membuat image container sendiri.
+
+Bagaimana caranya?
+
+1. Buat folder www
+
+        mkdir www
+2. Buat file index.php di dalam folder www
+        echo "<?php phpinfo(); ?>" > www/index.php
+
+3. Buat Dockerfile dengan isi sebagai berikut:
+
+        FROM ubuntu:16.04
+
+        RUN apt-get update && apt-get install -y apache2 php7.0 php7.0-fpm libapache2-mod-php && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+        COPY www/index.php /var/www/html
+
+        WORKDIR /var/www/html
+        RUN rm index.html
+
+        WORKDIR /
+
+        CMD ["apachectl", "-D", "FOREGROUND"]
+
+        EXPOSE 80
+
+    Keterangan:
+
+    - __FROM__ : Base image container yang tersedia
+    - __RUN__ : Untuk menjalankan perintah __saat pembuatan image container__
+    - __COPY__ : Untuk mengcopy file ke dalam image container
+    - __WORKDIR__ : Untuk pindah directory saat pembuatan image container
+    - __CMD__ : Untuk menjalankan perintah __saat container dinyalakan__
+    - __EXPOSE__ : Untuk mendefinisikan port yang akan digunakan sebagai port forwarding
+    - Syntax lebih lanjut cek [Klik Disini](https://docs.docker.com/engine/reference/builder/)
+4. Buat image dengan perintah
+
+        docker build -t ubuntu-komputasiawan-images ./
+
+5. Buat container baru dengan perintah
+
+        docker run --name ubuntu-cloud -p 9001:80 -d ubuntu-komputasiawan-images
+
+6. Cek pada browser
+
+![](Assets/11.png)
