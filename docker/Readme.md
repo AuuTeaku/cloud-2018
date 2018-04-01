@@ -182,7 +182,8 @@ Bagaimana caranya?
 _COMING SOON_
 
 ### E. Soal
-_COMING SOON_
+
+Nana adalah mahasiswa semester 6 dan sekarang sedang mengambil matakuliah komputasi awan.
 
 ### F. Referensi
 1. Modul Komputasi Awan 2017 oleh Thiar Hasbiya S.Kom, M.Kom
