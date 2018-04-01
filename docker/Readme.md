@@ -137,6 +137,7 @@ Bagaimana caranya?
 
         mkdir www
 2. Buat file index.php di dalam folder www
+
         echo "<?php phpinfo(); ?>" > www/index.php
 
 3. Buat Dockerfile dengan isi sebagai berikut:
