@@ -176,3 +176,13 @@ Bagaimana caranya?
 6. Cek pada browser
 
 ![](Assets/11.png)
+
+### D. Docker Compose
+_COMING SOON_
+
+### E. Soal
+_COMING SOON_
+
+### F. Referensi
+1. Modul Komputasi Awan 2017 oleh Thiar Hasbiya S.Kom, M.Kom
+2. [Docker official website](https://docker.com)
