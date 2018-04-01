@@ -129,7 +129,7 @@ Docker tidak menyimpan state atau data apapun di dalam kontainer. Sehingga jika 
     ![](Assets/10.png)
 
 ### D. Dockerfile
-Dockerfile adalah file yang digunakan untuk membuat image container sendiri.
+Dockerfile adalah file yang berisi perintah-perintah yang digunakan untuk membuat image container sendiri.
 
 Bagaimana caranya?
 
