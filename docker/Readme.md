@@ -279,7 +279,7 @@ Karena web mereka membutuhkan mysql sebagai database, terakhir mereka membuat co
 
     username : userawan
     password : buayakecil
-    nama database : userawan
+    nama database : reservasi
 
 Selain setup environmet mysql, mereka juga mengimport dump database web mereka menggunakan Docker Compose dan tak lupa membuat volume agar storage mysql menjadi persisten[4].
 
