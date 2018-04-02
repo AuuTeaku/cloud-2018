@@ -179,7 +179,84 @@ Bagaimana caranya?
 ![](Assets/11.png)
 
 ### D. Docker Compose
-_COMING SOON_
+Docker Compose adalah file untuk menjalankan container lebih dari satu.
+
+#### D.1 Basic Docker Compose
+1. Buat file dengan nama __docker-compose.yml__ dengan isi sebagai berikut
+
+        version: '3.3'
+
+        services:
+        db:
+            image: mysql:5.7
+            volumes:
+                - dbdata:/var/lib/mysql
+            restart: always
+            environment:
+                MYSQL_ROOT_PASSWORD: somewordpress
+                MYSQL_DATABASE: wordpress
+                MYSQL_USER: wordpress
+                MYSQL_PASSWORD: wordpress
+
+        wordpress:
+            depends_on:
+                - db
+            image: wordpress:latest
+            ports:
+                - "8000:80"
+            restart: always
+            environment:
+                WORDPRESS_DB_HOST: db:3306
+                WORDPRESS_DB_USER: wordpress
+                WORDPRESS_DB_PASSWORD: wordpress
+        volumes:
+            dbdata:
+
+    Keterangan: 
+
+    - __wordpress, db__ : adalah nama service
+    - __images__ : digunakan untuk deklarasi nama image container seperti -d pada docker cli
+    - __ports__ : untuk deklarasi port forwording seperti -p
+    - __restart__ : untuk flag restart apabila service gagal
+    = __environment__ : untuk deklarasi variable environment
+    - __volumes__ : untuk deklarasi volume
+    - __depends_on__ : untuk deklarasi hubungan dependensi antar container
+2. Untuk menjalankan docker compose dengan perintah berikut
+
+
+        docker-compose up -d
+    
+    Keterangan:
+    - -d untuk berjalan pada background
+
+#### D.2 Build Dockerfile dengan Docker Compose
+1. Buat file docker-compose.yml pada folder tempat Dockerfile yang dibuat pada bagian sebelumnya dengan isi.
+
+        version: '3.3'
+
+        services:
+            ubuntu-cloud:
+                build:
+                    context: ./
+                ports:
+                    - "9001:80"
+                volumes:
+                    - ./www:/var/www/html
+    Keterangan:
+
+    - context: menunjukkan tempat Dockerfile disimpan
+
+
+2. Untuk menjalankan Docker Compose dan membuat Docker Image dengan perintah
+
+        docker-compose up -d --build
+
+#### D.3 Perintah pada Docker Compose yang perlu diketahui
+- Untuk membuat container dengan Docker Compose : `docker-up up -d`
+- Untuk menjalankan Docker Compose : `docker-up start`
+- Untuk menhentikan Docker Compose : `docker-up stop`
+- Untuk menghapus Docker Compose : `docker-up rm -d`
+
 
 ### E. Soal
 
