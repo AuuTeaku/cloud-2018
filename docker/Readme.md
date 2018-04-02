@@ -23,6 +23,8 @@ Docker adalah virtualisasi berbentuk kontainer. Kontainer bekerja lebih efisien 
 
 ### 1. Instalasi Docker
 - Instalasi pada [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce-1)
+Keterangan : Lakukan instalasi sampai [Continue to Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/) bagian __Configure Docker to start on boot__
+
 
 ### 2. Instalasi Docker Composer
 - Instalasi pada [Ubuntu](https://docs.docker.com/compose/install/#linux)
