@@ -255,7 +255,7 @@ Docker Compose adalah file untuk menjalankan container lebih dari satu.
 - Untuk membuat container dengan Docker Compose : `docker-up up -d`
 - Untuk menjalankan Docker Compose : `docker-up start`
 - Untuk menhentikan Docker Compose : `docker-up stop`
-- Untuk menghapus Docker Compose : `docker-up rm -d`
+- Untuk menghapus Docker Compose : `docker-up rm`
 
 
 ### E. Soal
