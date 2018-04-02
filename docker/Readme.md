@@ -264,7 +264,7 @@ Docker Compose adalah file untuk menjalankan container lebih dari satu.
 
 #### [Peraturan]
 1. Laporan harus berupa Markdown.
-2. Tata cara pengerjaan silahkan lihat [Klik Disi](https://github.com/dzakybd/PKSJ_Tugas) sebagai pedoman bentuk sitematis laporan.
+2. Tata cara pengerjaan silahkan lihat [Klik Disini](https://github.com/dzakybd/PKSJ_Tugas) sebagai pedoman bentuk sitematis laporan.
 3. Ikui apa yang diminta oleh soal, dan tidak diperbolehkan menginstall atau mensetup config melalui perintah docker exec -ti [ID Container] /bin/bash
 
 Nana adalah mahasiswa semester 6 dan sekarang sedang mengambil matakuliah komputasi awan. Saat mengambil matakuliah komputasi awan dia mendapatkan materi sesilab tentang Docker. Suatu hari Nana ingin membuat sistem reservasi lab menggunakan Python Flask. Dia dibantu temannya, Putra awalnya membuat web terlebih dahulu. Web dapat di download [disini](https://cloud.fathoniadi.my.id/reservasi.zip).
