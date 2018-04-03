@@ -62,7 +62,7 @@ Terdapat hasil pencarian dengan Name httpd dan official ok, berarti kontainer/im
     
     Keterangan :
     - perintah --name digunakan untuk memberikan nama pada kontainer yang akan dibuat.
-    - perintah -p digunakan sebagai port forwarding 8080 adalah port pada host, sedangkan 80 adalah port pada kontainer (port forwarding).
+    - perintah -p digunakan sebagai port forwarding 9000 adalah port pada host, sedangkan 80 adalah port pada kontainer (port forwarding).
     - perintah -d menandakan image kontainer dijalankan sebagai servis.
     - httpd adalah nama image yang digunakan untuk membuat kontainer.
 
